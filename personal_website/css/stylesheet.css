@@ -1,7 +1,19 @@
 body {
-    background-color: #F6D5D8;
+    background-color: #d9eaff;
 }
 
 h1{
     color:#003153;
+}
+
+.bcit_logo{
+    display: inline;
+    float:right;
+}
+
+li{
+    display:inline;
+}
+nav{
+    text-align: center;
 }
