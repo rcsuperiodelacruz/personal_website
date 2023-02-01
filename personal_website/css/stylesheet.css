@@ -10,12 +10,11 @@ h1{
     display: inline;
     float:right;
 }
-
-li{
-    display:inline;
-}
-nav{
+.nav{
     text-align: center;
     background-color: #7ba2d1;
     padding:5px;
+}
+.nav li{
+    display: inline;
 }
