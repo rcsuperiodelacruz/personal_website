@@ -18,3 +18,7 @@ h1{
 .nav li{
     display: inline;
 }
+
+#fullname{
+    font-family: 'Montserrat', sans-serif;
+}
