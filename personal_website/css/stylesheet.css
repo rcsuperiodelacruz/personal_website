@@ -11,13 +11,17 @@ h1{
     float:right;
 }
 .nav{
-    text-align: center;
     background-color: #7ba2d1;
-    padding:5px;
+
 }
-.nav li{
-    display: inline;
+ul{
+    list-style-type: none;
 }
+
+header{
+    background-color: #7ba2d1;
+}
+
 
 #fullname{
     font-family: 'Montserrat', sans-serif;
@@ -29,4 +33,41 @@ h1{
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-auto-rows: repeat(2, 1fr);
+}
+
+
+nav{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my_classes{
+    border-bottom: 1px solid #5696c3;
+    padding: 10px
+}
+
+
+@media (min-width:600px){
+    .my_classes a>p{
+        order: 2;
+        grid-area: 1 1 2 3;
+
+    }
+    .my_classes{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: repeat(1fr, 1fr);
+
+        column-gap: 10px;
+    }
+    nav{
+        flex-direction: row;
+    }
 }
