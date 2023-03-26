@@ -27,9 +27,17 @@ let takingCourse = false;
 for (let item of courses){
     if (item.code.includes(myCourses))
     console.log('i am taking this course');
+    colorGreen()
+
 }
 
 if (takingCourse = true);
     const newCourse = {code: `ACIT ${myCourses}`, name : null};
     courses.push(newCourse);
     console.log(`added ${myCourses} to list of current courses`);
+
+function colorGreen(){
+    const ulElement = document.querySelector('body.coursesBody')
+    ulElement.classList.add('greenBackground')
+}
+ 
