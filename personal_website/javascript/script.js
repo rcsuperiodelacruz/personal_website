@@ -62,23 +62,37 @@ const array = createCourseArray()
 function findCourse(array){
     do{
             var myCourses = prompt('what class do you want to check')
-        }
+        }while(isNaN(myCourses) || myCourses.length !== 4);
         
-        while(isNaN(myCourses) || myCourses.length !== 4)
-        
-        let takingCourse = false;
-        
-        for (let item of array){
-            if (item.code.includes(myCourses))
+    let takingCourse = false;
+    
+    for (let item of array){
+        if (item.code.includes(myCourses)){
             console.log('i am taking this course');
             colorGreen()
-        
+        }else{
+            takingCourse = true
         }
-        
-        if (takingCourse = true);
-            const newCourse = {code: `ACIT ${myCourses}`, name : null};
-            array.push(newCourse);
-            console.log(`added ${myCourses} to list of current courses`);
+
+    }
+    if (takingCourse == true){
+        const newCourse = {code: `ACIT ${myCourses}`, name : null};
+        array.push(newCourse);
+        console.log(`added ${myCourses} to list of current courses`);
+        const element = document.querySelector("body.coursesBody");
+
+        const para = document.createElement("p");
+        const node = document.createTextNode(`course:${myCourses}       description: n/a        date: fall 2020`);
+        para.appendChild(node)
+        element.appendChild(para);
+
+
+    }
 }
 
 findCourse(array)
+
+function colorGreen(){
+    const ulElement = document.querySelector('body.coursesBody')
+    ulElement.classList.add('greenBackground')
+}
